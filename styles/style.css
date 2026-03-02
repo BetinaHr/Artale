@@ -1,13 +1,34 @@
 body {
-    background: #EEAECA;
-    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: F4F0E4;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    color: #44A194
 }
 
 nav {
-   
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #44A194;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #537D96;
 }
