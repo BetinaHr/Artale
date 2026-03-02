@@ -6,7 +6,11 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    color: #44A194
+    color: #44A194;
+}
+
+h3 {
+    color: #44A194;
 }
 
 nav {
@@ -32,3 +36,25 @@ nav li a {
 nav li a:hover {
   background-color: #537D96;
 }
+
+.catalog-offers {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+    max-width: 400px
+}
+
+.catalog-offers img {
+    display: inline-block;
+    width: 30px;
+    height: 30px
+}
+
+.page-border {
+    margin-left: 50px; 
+    margin-right: 50px; 
+    justify-content: center;
+    display: flex;
+}
+
