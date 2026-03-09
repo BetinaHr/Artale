@@ -1,4 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @font-face {
     font-family: "DXDoklad";
     src: url("../src/assets/fonts/DXDoklad10M/DXDoklad10M-Regular.woff2") format("woff2"),
@@ -8,7 +9,9 @@
 }
 body {
     background: #faf8f3 ;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "DXDoklad", monospace;
 }
 
 #home-page-books-img {
@@ -20,7 +23,19 @@ body {
 }
 
 .first-block {
-    margin-top: 80px;
+    margin-top: 150px;
+}
+
+.first-block p{
+    margin-left: 80px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    max-width: 800px;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .first-block button {
@@ -35,7 +50,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-family: "DXDoklad", monospace;
-    font-size: 35px;
+    font-size: 55px;
     padding-top: 50px;
     padding-right: 30px;
     padding-bottom: 50px;
@@ -70,7 +85,7 @@ nav {
 
 .nav-content {
     font-size: 20px;
-    padding-right: 15px;
+    padding-right: 80px;
     padding-left: 80px;
 
 }
@@ -89,10 +104,12 @@ nav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  position: relative;
+  transition: all 0.4s;
 }
 
 nav li a:hover {
-  /* background-color: #ffd8c4; */
+    transform: translateY(-10px);
 }
 
 .catalog-offers {
@@ -122,10 +139,15 @@ button {
     border-radius: 8px;
     border-color: rgba(139, 111, 71, 0.491);
     color: #8b6f47;
-    font-size: 16px;
     text-align: center;
     padding: 15px 32px;
     cursor: pointer;
+    margin-top: 25px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    font-family: "DXDoklad", monospace;
 }
 
 .unique-button {
@@ -137,13 +159,14 @@ button {
     margin-top: 100px;
     padding: 200px 100px;
     background-color:#d4b896;
-    /* align-items: center;
-    justify-content: center;
-    text-align: center; */
-}
-
-.commission-redirect-section h1{
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+.next-section h1{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
