@@ -5,24 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/023/654/784/non_2x/golden-logo-template-free-png.png">
+    <link href="styles/reset.css" rel="stylesheet" />
     <link href="styles/style.css" rel="stylesheet" />
 </head>
 <body>
     <header>
         <nav>
-            <img src="https://static.vecteezy.com/system/resources/previews/023/654/784/non_2x/golden-logo-template-free-png.png" alt="brand-logo" style="width: 35px; height: 35px;">
-            <li><a href="index.html">Начало</a></li>
-            <li><a href="src/catalog.html">Каталог</a></li>
-            <li><a href="src/aboutUs.html">За нас</a></li>
-            <li><a href="src/contacts.html">Контакти</a></li>
+            <div class="nav-content">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/654/784/non_2x/golden-logo-template-free-png.png" alt="brand-logo" style="width: 35px; height: 35px;">
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="src/catalog.html">Каталог</a></li>
+                <li><a href="src/commissions.html">Поръчки</a></li>
+                <li class="nav-right"><a href="src/aboutUs.html">За нас</a></li>
+                <li class="nav-right"><a href="src/contacts.html">Контакти</a></li>
+            </div>
         </nav>
-        <h1>Artale</h1>
     </header>
-
+    
     <main>
-        <hr>
-        
-        <div class="page-border">
+        <div class="first-block">
+            <h1>Every book tells a story. <br> But here we judge it by the cover.</h1>
+            <!-- <img id="home-page-books-img" src="https://images.unsplash.com/photo-1762113246655-05f2cb669f34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwYm9vayUyMGNvbGxlY3Rpb258ZW58MXx8fHwxNzcyODk0NTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Books"> -->
+            <button class="unique-button">Browse Catalog</button>
+            <button>Commission Now</button>
+        </div>
+
+        <div class="next-section">
+            <h1 class="commission-redirect-section">Ready to create your own masterpiece?</h1>
+            <p>Commission your own fairytale.</p>
+        </div>
+
+
+        <!-- <div class="page-border">
             <div class="catalog-offers">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABzaIkPuS8w8oHKBYqy1PNCdxBve2ff23cw&s" id="catalog-offer-heading" alt="book-painting">
                 <h3 id="catalog-offer-heading">Custom Cover</h3>
@@ -40,7 +54,7 @@
                 <h3>Custom Cover</h3>
                 <p> Some text for testing. Some text for testing. </p>
             </div>
-        </div>
+        </div> -->
         
     </main>
 
