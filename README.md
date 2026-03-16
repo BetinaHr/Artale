@@ -1,2 +1,9 @@
 # Artale
-A website for creative art works on books.
+Уебсайт за декориране на книги.
+
+## Визия и цел на бранда
+
+
+## Дизайн система
+Platform design system.
+Минималистичен стил / плосък дизайн.
