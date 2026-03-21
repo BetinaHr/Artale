@@ -7,6 +7,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+* {
+    cursor: url('/feather.png') 24 24, auto;
+
+}
 body {
     background: #faf8f3 ;
     font-weight: 400;
@@ -144,7 +149,7 @@ button {
     color: #8b6f47;
     text-align: center;
     padding: 15px 32px;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-top: 25px;
     
     font-weight: 400;
