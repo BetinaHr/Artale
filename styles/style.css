@@ -28,9 +28,10 @@ body {
     padding: 5px 5px 5px 5px;
 }
 
+
 .first-block {
     margin-top: 150px;
-
+    
 }
 
 .first-block p{
@@ -62,6 +63,18 @@ h1 {
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px; 
+}
+
+.nav-content img {
+    float: left;
+}
+
+.nav-content h3 {
+    float: left;
+    margin-top: 15px;
+    font-size: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 h3 {
