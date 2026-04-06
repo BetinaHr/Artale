@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles/reset.css" rel="stylesheet" />
     <link href="../styles/style.css" rel="stylesheet" />
+    <link href="../styles/contacts.css" rel="stylesheet" />
+
     <title>Contacts</title>
 </head>
 <body>
@@ -21,6 +23,62 @@
         </nav>
 
         <h1>Контакти</h1>
+
     </header>
+
+    <main>
+        <form class="commission-form">
+
+            <div class="card">
+                <h2>Вашата информация</h2>
+
+                <div class="form-row">
+                    <input type="text" placeholder="Име и фамилия" required>
+                    <input type="email" placeholder="Имейл" required>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Избор на книга</h2>
+
+                <div class="form-row">
+                    <input type="text" placeholder="Заглавие на книга">
+                    <input type="text" placeholder="Автор">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Персонализация</h2>
+
+                <div class="form-row">
+                    <select>
+                        <option>Материал на корицата</option>
+                        <option>Кожа</option>
+                        <option>Твърда</option>
+                        <option>Мека</option>
+                    </select>
+
+                    <input type="text" placeholder="Цвят на корицата">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Гравиране</h2>
+                <input type="text" placeholder="Инициали или кратък текст">
+            </div>
+
+            <div class="card">
+                <h2>Допълнителни бележки</h2>
+                <textarea placeholder="Опиши какво си представяш..."></textarea>
+            </div>
+
+            <button class="submit-btn">Изпрати поръчката</button>
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
