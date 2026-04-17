@@ -185,6 +185,17 @@ button {
     font-size: 18px;
     font-style: normal;
     font-family: "DXDoklad", monospace;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(139, 111, 71, 0.18);
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(139, 111, 71, 0.12);
 }
 
 .unique-button {
