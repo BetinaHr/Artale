@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title>Artale | Home Page</title>
+
   <link rel="icon" type="image/x-icon" href="src/assets/images/Logo-modified.png">
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="styles/reset.css" rel="stylesheet" />
-  <link href="styles/style.css" rel="stylesheet" />
+  <link href="styles/reset.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,23 +20,18 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
       <div class="container">
 
-        <!-- Лого -->
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="src/assets/images/Artale.png" alt="logo" width="50" height="50">
-          <span class="ms-2" style="font-family: DXDoklad; font-size: 22px;">
-            Artale
-          </span>
+          <img src="src/assets/images/Artale.png" alt="Artale logo" width="50" height="50">
+          <span class="brand-name ms-2">Artale</span>
         </a>
 
-        <!-- Бутон за mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Меню -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
-
             <li class="nav-item">
               <a class="nav-link" href="index.html">Начало</a>
             </li>
@@ -55,12 +51,10 @@
             <li class="nav-item">
               <a class="nav-link" href="src/contacts.html">Контакт</a>
             </li>
-
           </ul>
         </div>
 
-        <!-- Бутон вдясно -->
-        <a href="src/commissions.html" class="purchase-btn" style="border-radius: 8px;">
+        <a href="src/commissions.html" class="purchase-btn">
           Направи поръчка
         </a>
 
@@ -69,99 +63,170 @@
   </header>
 
   <main>
-    <div class="first-block">
+<section class="first-block">
+  <div class="page-container hero-layout">
+
+    <div class="hero-text">
       <h1>Всяка книга разказва история. <br> Но тук я съдим по корицата.</h1>
-      <p>Ние превръщаме класическата литература в персонализирани шедьоври. Ръчно рисувани ръбове, персонализирани
-        корици и гравирани инициали правят всяка книга уникално ваша.</p> <br>
-      <!-- <img id="home-page-books-img" src="https://images.unsplash.com/photo-1762113246655-05f2cb669f34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwYm9vayUyMGNvbGxlY3Rpb258ZW58MXx8fHwxNzcyODk0NTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Books"> -->
-      <!-- <img id="home-page-books-img" src="src/assets/images/books.jpg" alt="Books" style="width: auto;"> -->
-      <button onclick="document.location='src/catalog.html'" class="unique-button">Разгледай каталога</button>
-      <button onclick="document.location='src/commissions.html'">Поръчай сега</button>
-    </div>
 
-    <div class="next-section">
-      <h1 class="commission-redirect-section">Искате да създадете свой шедьовър?</h1>
-      <p>Commission a personalized book today and own a piece of art that tells your story.</p>
-      <button onclick="document.location='src/commissions.html'">Направи своята поръчка</button>
-    </div>
+      <p>
+        Ние превръщаме класическата литература в персонализирани шедьоври.
+        Ръчно рисувани ръбове, персонализирани корици и гравирани инициали
+        правят всяка книга уникално ваша.
+      </p>
 
+      <div class="hero-buttons">
+        <button onclick="document.location='src/catalog.html'" class="unique-button">
+          Разгледай каталога
+        </button>
 
-    <!-- <div class="page-border">
-            <div class="catalog-offers">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABzaIkPuS8w8oHKBYqy1PNCdxBve2ff23cw&s" id="catalog-offer-heading" alt="book-painting">
-                <h3 id="catalog-offer-heading">Custom Cover</h3>
-                <p> Some text for testing. Some text for testing. </p>
-            </div>
-
-            <div class="catalog-offers">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABzaIkPuS8w8oHKBYqy1PNCdxBve2ff23cw&s" id="catalog-offer-heading" alt="book-painting">
-                <h3>Custom Cover</h3>
-                <p> Some text for testing. Some text for testing. Some text for testing. Some text for testing. Some text for testing. Some text for testing. </p>
-            </div>
-
-            <div class="catalog-offers">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABzaIkPuS8w8oHKBYqy1PNCdxBve2ff23cw&s" id="catalog-offer-heading" alt="book-painting">
-                <h3>Custom Cover</h3>
-                <p> Some text for testing. Some text for testing. </p>
-            </div>
-        </div> -->
-
-    <div class="craft-section">
-      <h2>Нашите творби</h2>
-
-      <div class="craft-container">
-        <div class="craft-card">
-          <div class="icon-circle">
-            <img src="src\assets\images\art.png" alt="icon" style="width: 40px;">
-          </div>
-          <h3>Painted Edges</h3>
-          <p>Each page edge is hand-painted with vibrant colors or elegant metallics, creating a stunning
-            visual effect when closed.</p>
-        </div>
-
-        <div class="craft-card">
-          <div class="icon-circle">
-            <img src="src\assets\images\book.png" alt="icon" style="width: 40px;">
-
-          </div>
-          <h3>Custom Covers</h3>
-          <p>Premium leather or fabric covers designed to match your style. Each cover is crafted with
-            attention to detail.</p>
-        </div>
-
-        <div class="craft-card">
-          <div class="icon-circle">
-            <img src="src\assets\images\cut.png" alt="icon" style="width: 40px;">
-          </div>
-          <h3>Engraved Initials</h3>
-          <p>Personalize the front page with custom engravings. Your initials, a special date, or a meaningful
-            quote.</p>
-        </div>
+        <button onclick="document.location='src/commissions.html'">
+          Поръчай сега
+        </button>
       </div>
     </div>
 
+    <div class="book-illustration">
+      <div class="floating-dot dot-1"></div>
+      <div class="floating-dot dot-2"></div>
+      <div class="floating-dot dot-3"></div>
+
+      <div class="book-shadow"></div>
+
+      <div class="book">
+        <div class="book-cover">
+          <div class="cover-border"></div>
+          <div class="cover-inner-border"></div>
+
+          <div class="cover-decoration">
+            <div class="ornament">✦</div>
+            <div class="cover-initial">A</div>
+            <div class="ornament bottom">✦</div>
+          </div>
+        </div>
+
+        <div class="book-spine">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="book-pages">
+          <div class="painted-edge top"></div>
+          <div class="painted-edge right"></div>
+          <div class="painted-edge bottom"></div>
+
+          <div class="page-content">
+            <div class="page-ornament"></div>
+
+            <div class="text-line long"></div>
+            <div class="text-line medium"></div>
+            <div class="text-line long"></div>
+            <div class="text-line short"></div>
+            <div class="text-line long"></div>
+            <div class="text-line medium"></div>
+
+            <div class="engraving">
+              <span>М. И.</span>
+              <small>гравирани инициали</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-labels">
+        <span>Рисувани ръбове</span>
+        <span>Нова корица</span>
+        <span>Гравирани инициали</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <section class="next-section">
+      <div class="page-container">
+        <h1 class="commission-redirect-section">Искате да създадете свой шедьовър?</h1>
+
+        <p>
+          Всяка книга е уникално произведение на изкуството, създадено с любов, търпение и внимание към всеки детайл.
+        </p>
+
+        <button onclick="document.location='src/commissions.html'">
+          Направи своята поръчка
+        </button>
+      </div>
+    </section>
+
+    <section class="craft-section">
+      <div class="page-container">
+        <h2>Нашите творби</h2>
+
+        <div class="craft-container">
+          <article class="craft-card">
+            <div class="icon-circle">
+              <img src="src/assets/images/art.png" alt="Painted edges icon">
+            </div>
+
+            <h3>Painted Edges</h3>
+
+            <p>
+              Each page edge is hand-painted with vibrant colors or elegant metallics,
+              creating a stunning visual effect when closed.
+            </p>
+          </article>
+
+          <article class="craft-card">
+            <div class="icon-circle">
+              <img src="src/assets/images/book.png" alt="Custom covers icon">
+            </div>
+
+            <h3>Custom Covers</h3>
+
+            <p>
+              Premium leather or fabric covers designed to match your style.
+              Each cover is crafted with attention to detail.
+            </p>
+          </article>
+
+          <article class="craft-card">
+            <div class="icon-circle">
+              <img src="src/assets/images/cut.png" alt="Engraved initials icon">
+            </div>
+
+            <h3>Engraved Initials</h3>
+
+            <p>
+              Personalize the front page with custom engravings.
+              Your initials, a special date, or a meaningful quote.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div class="footer-basic">
     <footer>
-      <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
-            class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a
-          href="#"><i class="icon ion-social-facebook"></i></a>
+      <div class="social">
+        <a href="#" aria-label="Instagram"></a>
+        <a href="#" aria-label="TikTok"></a>
+        <a href="#" aria-label="Pinterest"></a>
+        <a href="#" aria-label="Facebook"></a>
       </div>
+
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Home</a></li>
-        <li class="list-inline-item"><a href="#">Services</a></li>
-        <li class="list-inline-item"><a href="#">About</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="index.html">Начало</a></li>
+        <li class="list-inline-item"><a href="src/catalog.html">Каталог</a></li>
+        <li class="list-inline-item"><a href="src/commissions.html">Галерия</a></li>
+        <li class="list-inline-item"><a href="src/aboutUs.html">За нас</a></li>
+        <li class="list-inline-item"><a href="src/contacts.html">Контакт</a></li>
       </ul>
+
       <p class="copyright">Artale © 2026</p>
     </footer>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
