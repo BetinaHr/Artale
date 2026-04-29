@@ -26,7 +26,72 @@ body {
     font-weight: 400;
     font-style: normal;
     font-family: "DXDoklad", monospace;
-    padding-top: 60px;
+    padding-top: 80px;
+    /* padding-top: 5rem; */
+}
+
+main {
+    padding-top: 50px;
+}
+
+/* NAVIGATION */
+
+/* Navbar background */
+.custom-navbar {
+    background-color: #f5efe8;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(139, 111, 71, 0.2);
+}
+
+/* Brand text */
+.brand-text {
+    font-family: "Special Elite", cursive;
+    font-size: 26px;
+    color: #8b6f47;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #8b6f47;
+    margin: 0 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover animation (меко движение) */
+.navbar-nav .nav-link:hover {
+    transform: translateY(-5px);
+    color: #8b3a2f;
+}
+
+/* Elegant underline */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 0%;
+    height: 1px;
+    background-color: #8b3a2f;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.purchase-btn {
+    display: inline-block; /* важно за <a> */
+    background-color: #8b6f47;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 1px solid rgba(139, 111, 71, 0.3);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-decoration: none; /* маха underline */
+    transition: all 0.3s ease;
 }
 
 #home-page-books-img {
@@ -40,7 +105,7 @@ body {
 
 .first-block {
     margin-top: 0;
-    padding-top: 150px;
+    /* padding-top: 150px; */
 }
 
 .first-block p{
@@ -50,7 +115,7 @@ body {
     max-width: 800px;
     padding-top: 30px;
     font-size: 20px;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "DXDoklad", monospace;
     font-weight: 300;
     font-style: normal;
 }
@@ -60,10 +125,8 @@ body {
 }
 
 #home-page-books-img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(30px, 30px); 
+    float: right;
+    display: inline-block;
 }
 
 h1 {
@@ -81,7 +144,7 @@ h1 {
     padding-left: 80px; 
 }
 
-.nav-content img {
+/* .nav-content img {
     float: left;
 }
 
@@ -91,36 +154,15 @@ h1 {
     font-size: 20px;
     padding-right: 25px;
     padding-left: 25px;
-}
+} */
 
 h3 {
     color: #8b6f47 ;
 }
 
-nav {
-    /* Sticky navbar */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 
-    overflow: hidden;
-    list-style-type: none;
-    background-color: #ffffff;
-    /* max-width: 1250px; */
-    /* margin: 0 auto; */
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-    
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(139, 111, 71, 0.2);
-}
 
-.nav-content {
+/* .nav-content {
     font-size: 20px;
     padding-right: 80px;
     padding-left: 80px;
@@ -129,12 +171,12 @@ nav {
 
 .nav-right {
     float: right;
-}
+} */
 
-nav li {
+/* nav li {
     float: left;
-}
-
+} */
+/* 
 nav li a {
   display: block;
   color: #8b6f47;
@@ -147,7 +189,7 @@ nav li a {
 
 nav li a:hover {
     transform: translateY(-10px);
-}
+} */
 
 .catalog-offers {
     display: inline-block;
