@@ -1,104 +1,224 @@
-/* #catalog-h1 {
+.catalog-page {
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+
+
+.catalog-hero {
+    padding: 80px 0 48px;
     text-align: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 32px;
-} */
+    background:
+        linear-gradient(
+            180deg,
+            rgba(212, 184, 150, 0.18) 0%,
+            rgba(250, 248, 243, 0) 100%
+        );
+}
+
+.catalog-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--brown);
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+#catalog-h1 {
+    margin: 0;
+    color: var(--text);
+    font-family: "DXDoklad", monospace;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.catalog-hero p {
+    max-width: 720px;
+    margin: 24px auto 0;
+    color: var(--text);
+    font-size: clamp(1rem, 1.2vw, 1.18rem);
+    line-height: 1.6;
+}
+
+/* Cards section */
+
+.catalog-section {
+    padding: 0 0 90px;
+}
 
 .catalog-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 30px;
-    padding: 0 60px 60px;
 }
 
+/* Card */
+
 .book-card {
-    background: #f8f6f3;
-    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease;
+    background: #fffdf9;
+    border: 1px solid rgba(139, 111, 71, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(139, 111, 71, 0.08);
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    border-color: rgba(139, 111, 71, 0.28);
+    box-shadow: 0 18px 38px rgba(139, 111, 71, 0.16);
 }
 
 .book-card img {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
 }
 
-.catalog-offers {
-    max-width: none; 
-    width: 100%;
-}
+/* Card content */
 
 .card-content {
-    padding: 20px;
+    padding: 22px;
 }
 
 .card-content h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
+    margin: 0 0 6px;
+    color: var(--text);
+    font-family: "DXDoklad", monospace;
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1.15;
 }
 
 .author {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
+    margin: 0 0 14px;
+    color: rgba(44, 36, 22, 0.58);
+    font-size: 0.95rem;
 }
 
 .description {
-    font-size: 14px;
-    margin-bottom: 15px;
+    margin: 0 0 18px;
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.45;
 }
 
+/* Tags */
+
 .tags {
-    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .tags span {
-    background: #eee;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    margin-right: 5px;
+    display: inline-block;
+    padding: 6px 11px;
+    background: rgba(212, 184, 150, 0.18);
+    border: 1px solid rgba(139, 111, 71, 0.12);
+    border-radius: 999px;
+    color: var(--brown);
+    font-size: 0.78rem;
 }
+
+/* Footer inside card */
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 0;
+    background: transparent;
+    border: 0;
 }
 
 .price {
-    font-size: 14px;
+    margin: 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
-button {
-    background: #8b6b3f;
-    color: white;
-    border: none;
-    padding: 8px 16px;
+.price strong {
+    color: var(--brown);
+    font-weight: 500;
+}
+
+/* Button only for catalog cards */
+
+.catalog-btn {
+    margin: 0;
+    padding: 10px 22px;
+    background: transparent;
+    border: 1px solid rgba(139, 111, 71, 0.45);
     border-radius: 10px;
-    /* cursor: pointer; */
-    transition: background 0.2s ease;
+    color: var(--brown);
+    font-family: "DXDoklad", monospace;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
 }
 
-button:hover {
-    background: #6f542f;
-    color: #eee;
+.catalog-btn:hover {
+    transform: translateY(-3px);
+    background: var(--brown);
+    color: var(--bg-soft);
+    box-shadow: 0 10px 22px rgba(139, 111, 71, 0.18);
 }
 
-/* Page division */
+/* Responsive */
 
-.page-border {
-    margin-left: 50px;
-    margin-right: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px; 
+@media (max-width: 1200px) {
+    .catalog-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .catalog-hero {
+        padding-top: 70px;
+    }
+
+    .catalog-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .book-card img {
+        height: 230px;
+    }
+}
+
+@media (max-width: 576px) {
+    .catalog-hero {
+        padding: 56px 0 36px;
+    }
+
+    .catalog-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .book-card img {
+        height: 220px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .catalog-btn {
+        width: 100%;
+    }
 }
