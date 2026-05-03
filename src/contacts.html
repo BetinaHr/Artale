@@ -1,104 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Contacts</title>
-    
+    <title>Контакт | Artale</title>
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="../styles/reset.css" rel="stylesheet" />
-    <link href="../styles/style.css" rel="stylesheet" />
-    <link href="../styles/commissions.css" rel="stylesheet" />
-
+    <!-- Styles -->
+    <link href="../styles/reset.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/contacts.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
-        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="./assets/images/Artale.png" alt="logo" width="50" height="50">
+                    <span class="ms-2" style="font-family: DXDoklad; font-size: 22px;">
+                        Artale
+                    </span>
+                </a>
 
-        <!-- Лого -->
-        <a class="navbar-brand d-flex align-items-center" href="../index.html">
-            <img src="./assets/images/Artale.png" alt="logo" width="50" height="50">
-            <span class="ms-2" style="font-family: DXDoklad; font-size: 22px;">
-            Artale
-            </span>
-        </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Бутон за mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Начало</a>
+                        </li>
 
-        <!-- Меню -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./catalog.html">Каталог</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html">Начало</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./commissions.html">Галерия</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./catalog.html">Каталог</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutUs.html">За нас</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./commissions.html">Галерия</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./contacts.html">Контакт</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./aboutUs.html">За нас</a>
-            </li>
+                <a href="./commissions.html" class="purchase-btn">
+                    Направи поръчка
+                </a>
 
-            <li class="nav-item">
-                <a class="nav-link" href="contacts.html">Контакт</a>
-            </li>
-
-            </ul>
-        </div>
-
-        <!-- Бутон вдясно -->
-        <a href="./commissions.html" class="purchase-btn">
-            Направи поръчка
-        </a>
-
-        </div>
-    </nav>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <form class="commission-form">
+    <main class="contacts-page">
+        <section class="contacts-section">
+            <div class="page-container contacts-layout">
 
-            <div class="card">
-                <h2>Вашата информация</h2>
+                <div class="contacts-info-side">
+                    <span class="contacts-kicker">Контакт</span>
 
-                <div class="form-row">
-                    <input type="text" placeholder="Име и фамилия" required>
-                    <input type="email" placeholder="Имейл" required>
-                    <input type="tel" placeholder="Номер" required>
+                    <h1>Свържете се с нас</h1>
 
+                    <p class="contacts-intro">
+                        Имате идея за персонализирана книга, специален подарък или въпрос
+                        относно поръчка? Пишете ни и ще Ви отговорим възможно най-скоро.
+                    </p>
+
+                    <div class="contacts-mini-grid">
+                        <div class="contact-mini-card">
+                            <span>✉</span>
+                            <div>
+                                <h3>Имейл</h3>
+                                <p>hello@artale.bg</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-mini-card">
+                            <span>☏</span>
+                            <div>
+                                <h3>Телефон</h3>
+                                <p>+359 888 000 000</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-mini-card">
+                            <span>⌂</span>
+                            <div>
+                                <h3>Локация</h3>
+                                <p>Русе, България</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-mini-card">
+                            <span>◷</span>
+                            <div>
+                                <h3>Отговор</h3>
+                                <p>До 1–2 работни дни</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-note">
+                        <p>“Всяка книга започва с идея — споделете ни Вашата.”</p>
+                    </div>
                 </div>
+
+                <form class="contact-form">
+                    <h2>Изпратете съобщение</h2>
+
+                    <div class="form-group">
+                        <label for="name">Име и фамилия</label>
+                        <input id="name" type="text" placeholder="Напр. Иван Иванов" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Имейл</label>
+                        <input id="email" type="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="tel" placeholder="+359 ..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Съобщение</label>
+                        <textarea id="message" placeholder="Споделете идеята си тук..." required></textarea>
+                    </div>
+
+                    <button class="contact-submit-btn" type="submit">
+                        Изпрати съобщение
+                    </button>
+                </form>
+
             </div>
-
-            <div class="card">
-                <h2>Съобщение</h2>
-                <textarea id="myText" placeholder="Сподели мислите си тук..."></textarea>
-            </div>
-
-            <button class="submit-btn">Изпрати съобщение</button>
-
-        </form>
+        </section>
     </main>
-
-    <footer>
-
-    </footer>
-
     <script src="../src/assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

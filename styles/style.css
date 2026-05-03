@@ -52,7 +52,7 @@ main {
 }
 
 .page-container {
-    width: min(100% - 48px, 1440px);
+    width: min(100% - 120px, 1440px);
     margin-inline: auto;
 }
 /* NAVIGATION */
@@ -177,9 +177,9 @@ main {
     justify-content: flex-start;
 }
 
-.first-block .page-container {
+/* .first-block .page-container {
     width: min(100% - 120px, 1440px);
-}
+} */
 
 /* BUTTONS */
 

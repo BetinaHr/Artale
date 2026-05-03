@@ -4,7 +4,6 @@
 }
 
 
-
 .catalog-hero {
     padding: 80px 0 48px;
     text-align: center;
@@ -150,8 +149,6 @@
     color: var(--brown);
     font-weight: 500;
 }
-
-/* Button only for catalog cards */
 
 .catalog-btn {
     margin: 0;

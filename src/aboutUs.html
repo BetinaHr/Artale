@@ -1,183 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За нас | Artale</title>
 
-    <title>За нас</title>
-
-     <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="../styles/reset.css" rel="stylesheet" />
-    <link href="../styles/style.css" rel="stylesheet" />
-    <link href="../styles/aboutUs.css" rel="stylesheet" />
-
-
+    <!-- Styles -->
+    <link href="../styles/reset.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/aboutUs.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
-        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="./assets/images/Artale.png" alt="logo" width="50" height="50">
+                    <span class="ms-2" style="font-family: DXDoklad; font-size: 22px;">
+                        Artale
+                    </span>
+                </a>
 
-        <!-- Лого -->
-        <a class="navbar-brand d-flex align-items-center" href="../index.html">
-            <img src="./assets/images/Artale.png" alt="logo" width="50" height="50">
-            <span class="ms-2" style="font-family: DXDoklad; font-size: 22px;">
-            Artale
-            </span>
-        </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Бутон за mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Начало</a>
+                        </li>
 
-        <!-- Меню -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./catalog.html">Каталог</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html">Начало</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./commissions.html">Галерия</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./catalog.html">Каталог</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./aboutUs.html">За нас</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./commissions.html">Галерия</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacts.html">Контакт</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <li class="nav-item">
-                <a class="nav-link" href="aboutUs.html">За нас</a>
-            </li>
+                <a href="./commissions.html" class="purchase-btn">
+                    Направи поръчка
+                </a>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./contacts.html">Контакт</a>
-            </li>
-
-            </ul>
-        </div>
-
-        <!-- Бутон вдясно -->
-        <a href="./commissions.html" class="purchase-btn">
-            Направи поръчка
-        </a>
-
-        </div>
-    </nav>
+            </div>
+        </nav>
     </header>
 
-    <main>
+    <main class="about-page">
+        <section class="about-hero">
+            <div class="page-container">
+                <span class="about-kicker">За нас</span>
 
-        <section class="about-story-section">
-            <div class="page-container about-story-layout">
+                <h1>Изкуството на книговезството</h1>
 
-                <div class="about-story-left">
-                    <span class="about-kicker">ЗА НАС</span>
+                <p class="about-lead">
+                    В Artale вярваме, че всяка книга заслужава да бъде повече от предмет —
+                    тя може да бъде лично произведение на изкуството, създадено с внимание,
+                    вкус и история.
+                </p>
 
-                    <h2>Изкуството на книговезството</h2>
+                <p class="about-text">
+                    Съчетаваме класическа литература, ръчна изработка и персонален дизайн.
+                    Всяка корица, всеки рисуван ръб и всяко гравирано посвещение се правят
+                    с мисъл към човека, който ще държи книгата в ръцете си.
+                </p>
 
-                    <p class="about-intro">
-                        В Artale вярваме, че всяка книга заслужава да бъде произведение на изкуството.
-                        Нашата страст към книговезството ни води да създаваме уникални,
-                        персонализирани книги, които ще бъдат съкровища за поколения.
+                 <a href="#about-features" class="section-arrow" aria-label="Към следващата секция">
+                        <img src="./assets/images/arrow-down.png" alt="arrow-down" width="24" height="24">
+                </a>
+            </div>
+        </section>
+
+        <section class="about-features-section" id="about-features">
+            <div class="page-container">
+                <div class="about-features-grid">
+
+                    <article class="about-feature-card">
+                        <div class="feature-icon">✦</div>
+                        <div>
+                            <h3>Ръчна изработка</h3>
+                            <p>Всяка книга се оформя внимателно, с майсторска работа и индивидуален подход.</p>
+                        </div>
+                    </article>
+
+                    <article class="about-feature-card">
+                        <div class="feature-icon">♡</div>
+                        <div>
+                            <h3>Любов към детайла</h3>
+                            <p>Обръщаме внимание на цветовете, материалите, ръбовете и финалното усещане.</p>
+                        </div>
+                    </article>
+
+                    <article class="about-feature-card">
+                        <div class="feature-icon">◈</div>
+                        <div>
+                            <h3>Премиум материали</h3>
+                            <p>Използваме качествени кожи, платове, хартия и декоративни елементи.</p>
+                        </div>
+                    </article>
+
+                    <article class="about-feature-card">
+                        <div class="feature-icon">✧</div>
+                        <div>
+                            <h3>Уникален дизайн</h3>
+                            <p>Всяка книга се създава според Вашата идея, стил и лична история.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-process-section">
+            <div class="page-container">
+                <div class="section-head">
+                    <span class="section-kicker">Как работим</span>
+                    <h2>Процесът зад всяка книга</h2>
+                    <p>
+                        От първата идея до готовото издание — всяка стъпка е внимателно
+                        планирана, за да създадем персонализирана книга с характер.
                     </p>
+                </div>
 
-                    <p class="about-text">
-                        Всяка корица, всеки рисуван ръб и всяко гравирано посвещение носи частица
-                        от нашата душа и внимание. Работим с традиционни техники, съчетани
-                        с модерна естетика.
+                <div class="process-grid">
+                    <article class="process-card">
+                        <span class="process-number">01</span>
+                        <h3>Консултация</h3>
+                        <p>Обсъждаме Вашата идея, стил и предпочитания.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <span class="process-number">02</span>
+                        <h3>Дизайн</h3>
+                        <p>Подготвяме визия, материали и посока за проекта.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <span class="process-number">03</span>
+                        <h3>Изработка</h3>
+                        <p>Книгата се изработва ръчно с внимание към всеки детайл.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <span class="process-number">04</span>
+                        <h3>Доставка</h3>
+                        <p>Вашият шедьовър е завършен и готов да стигне до Вас.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-video-section">
+            <div class="page-container">
+                <div class="section-head">
+                    <span class="section-kicker">Видео</span>
+                    <h2>Поглед отблизо към Artale</h2>
+                    <p>
+                        Информация за процеса на изработка, вдъхновението и философията зад всяка книга. Вижте как се ражда един шедьовър.
                     </p>
+                </div>
 
-                    <div class="about-features-grid">
-                        <div class="about-feature-item">
-                            <div class="about-feature-icon">✦</div>
-                            <div>
-                                <h3>Ръчна изработка</h3>
-                                <p>Всяка книга е изработена изцяло на ръка от опитни майстори с години практика.</p>
-                            </div>
+                <div class="video-shell">
+                    <div class="video-frame">
+                        <div class="video-placeholder">
+                            <span>Видео</span>
+                            <small>Авторсдко видео </small>
                         </div>
 
-                        <div class="about-feature-item">
-                            <div class="about-feature-icon">♡</div>
-                            <div>
-                                <h3>С любов към детайла</h3>
-                                <p>Внимание към всеки детайл, от избора на материали до финалното оформление.</p>
-                            </div>
-                        </div>
+                        <!-- OPTION 2: Local video -->
+                        <!--
+                        <video controls preload="metadata">
+                            <source src="../src/assets/videos/artale-video.mp4" type="video/mp4">
+                            Браузърът Ви не поддържа video tag.
+                        </video>
+                        -->
 
-                        <div class="about-feature-item">
-                            <div class="about-feature-icon">◈</div>
-                            <div>
-                                <h3>Премиум материали</h3>
-                                <p>Използваме само най-качествените кожи, платове, бои и хартия.</p>
-                            </div>
-                        </div>
-
-                        <div class="about-feature-item">
-                            <div class="about-feature-icon">✧</div>
-                            <div>
-                                <h3>Уникален дизайн</h3>
-                                <p>Всяка книга е уникална, създадена специално според Вашите желания.</p>
-                            </div>
-                        </div>
+                        <!-- OPTION 3: YouTube embed -->
+                        <!--
+                        <iframe
+                            src="https://www.youtube.com/embed/VIDEO_ID"
+                            title="Artale video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        -->
                     </div>
                 </div>
 
-                <!-- ДЯСНА ЧАСТ -->
-                <div class="about-story-right">
-                    <div class="about-right-panel">
-                        <div class="about-decor-circle"></div>
-                        <div class="about-decor-square"></div>
-
-                        <div class="about-steps-grid">
-                            <div class="about-step-card">
-                                <span class="about-step-number">01</span>
-                                <h4>Консултация</h4>
-                                <p>Обсъждаме Вашата визия</p>
-                            </div>
-
-                            <div class="about-step-card">
-                                <span class="about-step-number">02</span>
-                                <h4>Дизайн</h4>
-                                <p>Създаваме уникален проект</p>
-                            </div>
-
-                            <div class="about-step-card">
-                                <span class="about-step-number">03</span>
-                                <h4>Изработка</h4>
-                                <p>Майсторска работа на ръка</p>
-                            </div>
-
-                            <div class="about-step-card">
-                                <span class="about-step-number">04</span>
-                                <h4>Доставка</h4>
-                                <p>Вашият шедьовър е готов</p>
-                            </div>
-                        </div>
-
-                        <div class="about-image-card">
-                            <img src="src/assets/images/Edge-Heropng" alt="Ръчно изработена книга">
-
-                            <div class="about-image-overlay">
-                                <p>“Изкуството е в детайлите”</p>
-                                <span>– Философия на Artale</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="about-quote">
+                    <p>“Изкуството е в детайлите”</p>
+                    <span>Философията на Artale</span>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <script src="../src/assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

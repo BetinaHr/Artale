@@ -1,5 +1,5 @@
 const text = "Сподели мислите си тук...";
-const textarea = document.getElementById("myText");
+const textarea = document.getElementById("message");
 
 let i = 0;
 
