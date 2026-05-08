@@ -3,16 +3,10 @@
     min-height: 100vh;
 }
 
-
 .catalog-hero {
     padding: 80px 0 48px;
     text-align: center;
-    background:
-        linear-gradient(
-            180deg,
-            rgba(212, 184, 150, 0.18) 0%,
-            rgba(250, 248, 243, 0) 100%
-        );
+    background: var(--bg);
 }
 
 .catalog-kicker {
@@ -218,4 +212,26 @@
     .catalog-btn {
         width: 100%;
     }
+}
+
+/* FIX: Catalog navbar brand text */
+header .navbar .navbar-brand {
+    gap: 8px !important;
+}
+
+header .navbar .navbar-brand .artale-brand {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--text) !important;
+    font-family: "DXDoklad", monospace !important;
+    font-size: 1.6rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.12em !important;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    font-synthesis: none;
 }
