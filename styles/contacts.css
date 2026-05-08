@@ -129,6 +129,39 @@
 }
 
 /* FORM */
+/* Reusable message box */
+
+.site-message {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: none;
+    text-align: center;
+}
+
+.site-message.show {
+    display: block;
+}
+
+.site-message.error {
+    background: #fff6f1;
+    border: 1px solid #d9a27f;
+    color: #8b3f1f;
+}
+
+.site-message.success {
+    background: #f4fbf3;
+    border: 1px solid #9fc99b;
+    color: #356b32;
+}
+
+.input-error {
+    border-color: #c56b45 !important;
+    box-shadow: 0 0 0 4px rgba(197, 107, 69, 0.12) !important;
+}
 
 .contact-form {
     padding: 38px;

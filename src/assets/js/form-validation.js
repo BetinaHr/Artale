@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     message: "Моля, въведете Вашия имейл адрес."
                 },
                 {
+                    name: "phone",
+                    message: "Моля, въведете телефон за връзка."
+                },
+                {
                     name: "message",
                     message: "Моля, въведете Вашето съобщение."
                 }
