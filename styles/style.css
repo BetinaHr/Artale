@@ -33,6 +33,25 @@ body {
     color: var(--text);
     font-family: "DXDoklad", monospace;
     font-weight: 400;
+    animation: pageFadeIn 0.45s ease;
+}
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Page exit animation */
+body.page-exit {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.28s ease, transform 0.28s ease;
 }
 
 img {

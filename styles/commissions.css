@@ -4,55 +4,65 @@
     box-sizing: border-box;
 }
 
+/* Page title area */
+.commission-caption {
+    margin-top: 55px;
+    margin-bottom: 18px;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.commission-caption h1,
 h1 {
-    /* Fix - margin */
-    margin-top:  100px;
+    margin: 0;
     justify-content: center;
     display: flex;
     text-align: center;
-    /* padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;  */
-    color: rgba(139, 111, 71, 0.784)   ;
+    color: rgba(139, 111, 71, 0.784);
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.1;
 }
 
-.commission-caption {
-    margin-top: 100px;
-    text-align: center;
-    padding-bottom: 20px ;
+.commission-caption p {
+    margin: 8px auto 0;
+    max-width: 650px;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
+/* Form */
 .commission-form {
     max-width: 900px;
-    margin: 0 auto;
+    width: min(900px, 92%);
+    margin: 0 auto 35px;
 }
 
 .card {
     background: #ffffff;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 18px 22px;
+    margin-bottom: 15px;
     border-radius: 14px;
     border: 1px solid #e6dcc9;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .card h2 {
     font-size: 20px;
-    margin-bottom: 18px;
+    margin: 0 0 14px;
     color: #9a7b3b;
+    font-weight: 400;
 }
 
 .form-row {
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 12px 14px;
+    padding: 11px 14px;
     border-radius: 10px;
     border: 1px solid #d8cbb0;
     background: #f9f6f1;
@@ -62,7 +72,7 @@ textarea {
 }
 
 textarea {
-    min-height: 120px;
+    min-height: 85px;
     resize: vertical;
 }
 
@@ -80,8 +90,8 @@ textarea:focus {
 
 .submit-btn {
     display: block;
-    margin: 30px auto;
-    padding: 14px 35px;
+    margin: 22px auto 0;
+    padding: 13px 35px;
     cursor: pointer;
 }
 
@@ -110,7 +120,21 @@ header .navbar .navbar-brand .artale-brand {
 }
 
 @media (max-width: 768px) {
+    .commission-caption {
+        margin-top: 35px;
+    }
+
     .form-row {
         flex-direction: column;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 16px 18px;
+        margin-bottom: 14px;
+    }
+
+    textarea {
+        min-height: 90px;
     }
 }
