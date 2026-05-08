@@ -12,15 +12,15 @@
     padding-bottom: 0;
 }
 
-.commission-caption h1,
-h1 {
+.commission-caption h1 {
     margin: 0;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     text-align: center;
     color: rgba(139, 111, 71, 0.784);
     font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.1;
+    font-weight: 400;
 }
 
 .commission-caption p {
@@ -37,6 +37,41 @@ h1 {
     margin: 0 auto 35px;
 }
 
+/* Reusable site messages */
+.site-message {
+    width: min(900px, 92%);
+    margin: 0 auto 18px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: none;
+    text-align: center;
+}
+
+.site-message.show {
+    display: block;
+}
+
+.site-message.error {
+    background: #fff6f1;
+    border: 1px solid #d9a27f;
+    color: #8b3f1f;
+}
+
+.site-message.success {
+    background: #f4fbf3;
+    border: 1px solid #9fc99b;
+    color: #356b32;
+}
+
+/* Error input style */
+.input-error {
+    border-color: #c56b45 !important;
+    box-shadow: 0 0 0 2px rgba(197, 107, 69, 0.15) !important;
+}
+
+/* Form cards */
 .card {
     background: #ffffff;
     padding: 18px 22px;
@@ -53,11 +88,13 @@ h1 {
     font-weight: 400;
 }
 
+/* Rows */
 .form-row {
     display: flex;
     gap: 18px;
 }
 
+/* Inputs */
 input,
 select,
 textarea {
@@ -88,6 +125,7 @@ textarea:focus {
     color: #a89c85;
 }
 
+/* Submit button */
 .submit-btn {
     display: block;
     margin: 22px auto 0;
@@ -119,6 +157,7 @@ header .navbar .navbar-brand .artale-brand {
     font-synthesis: none;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .commission-caption {
         margin-top: 35px;

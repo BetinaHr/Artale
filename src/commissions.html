@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Поръчки</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="../styles/reset.css" rel="stylesheet" />
-    <link href="../styles/style.css" rel="stylesheet" />
-    <link href="../styles/commissions.css" rel="stylesheet" />
-
+    
+    <!-- Styles -->
+    <link href="../styles/reset.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/commissions.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +22,7 @@
 
                 <!-- Лого -->
                 <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                    <img src="./assets/images/Artale.png" alt="logo" width="50" height="50">
+                    <img src="./assets/images/Artale.png" alt="Artale logo" width="50" height="50">
                     <span class="artale-brand">Artale</span>
                 </a>
 
@@ -56,7 +55,7 @@
                 </div>
 
                 <!-- Бутон вдясно -->
-                <a href="commissions.html" class="purchase-btn">
+                <a href="./commissions.html" class="purchase-btn">
                     Направи поръчка
                 </a>
 
@@ -64,21 +63,34 @@
         </nav>
     </header>
 
-
     <main>
         <section class="commission-caption">
             <h1>Поръчай своята книга</h1>
             <p>Сподели визията си и ние ще създадем персонализиран шедьовър.</p>
         </section>
 
-        <form class="commission-form">
+        <!-- Reusable message box -->
+        <div class="site-message" id="siteMessage"></div>
+
+        <form class="commission-form" data-form-type="commission" novalidate>
 
             <div class="card">
                 <h2>Вашата информация</h2>
 
                 <div class="form-row">
-                    <input type="text" placeholder="Име и фамилия" required>
-                    <input type="email" placeholder="Имейл" required>
+                    <input 
+                        type="text" 
+                        name="fullName" 
+                        placeholder="Име и фамилия" 
+                        required
+                    >
+
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Имейл" 
+                        required
+                    >
                 </div>
             </div>
 
@@ -86,8 +98,19 @@
                 <h2>Избор на книга</h2>
 
                 <div class="form-row">
-                    <input type="text" placeholder="Заглавие на книга">
-                    <input type="text" placeholder="Автор">
+                    <input 
+                        type="text" 
+                        name="bookTitle" 
+                        placeholder="Заглавие на книга" 
+                        required
+                    >
+
+                    <input 
+                        type="text" 
+                        name="author" 
+                        placeholder="Автор" 
+                        required
+                    >
                 </div>
             </div>
 
@@ -95,37 +118,50 @@
                 <h2>Персонализация</h2>
 
                 <div class="form-row">
-                    <select>
-                        <option>Материал на корицата</option>
-                        <option>Кожа</option>
-                        <option>Твърда</option>
-                        <option>Мека</option>
+                    <select name="coverMaterial" required>
+                        <option value="">Материал на корицата</option>
+                        <option value="Кожа">Кожа</option>
+                        <option value="Твърда">Твърда</option>
+                        <option value="Мека">Мека</option>
                     </select>
 
-                    <input type="text" placeholder="Цвят на корицата">
+                    <input 
+                        type="text" 
+                        name="coverColor" 
+                        placeholder="Цвят на корицата"
+                    >
                 </div>
             </div>
 
             <div class="card">
                 <h2>Гравиране</h2>
-                <input type="text" placeholder="Инициали или кратък текст">
+
+                <input 
+                    type="text" 
+                    name="engraving" 
+                    placeholder="Инициали или кратък текст"
+                >
             </div>
 
             <div class="card">
                 <h2>Допълнителни бележки</h2>
-                <textarea id="message" placeholder="Сподели мислите си тук..."></textarea>
+
+                <textarea 
+                    name="message" 
+                    placeholder="Сподели мислите си тук..."
+                ></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Изпрати поръчката</button>
+            <button type="submit" class="submit-btn">
+                Изпрати поръчката
+            </button>
 
         </form>
     </main>
-    <script src="./assets/js/page-transition.js"></script>
 
-    <script src="../src/assets/js/script.js"></script>
-    <script src="../src/assets/js/catalog.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="./assets/js/page-transition.js"></script>
+    <script src="./assets/js/form-validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
