@@ -19,7 +19,7 @@
 
 * {
     box-sizing: border-box;
-    cursor: url('/feather.png') 24 24, auto;
+    cursor: url('../feather.png') 24 24, auto;
 }
 
 html {
