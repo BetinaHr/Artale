@@ -22,6 +22,29 @@
     cursor: url('../feather.png') 24 24, auto;
 }
 
+a,
+button,
+.nav-link,
+.purchase-btn,
+.order-btn,
+.book-tab,
+.contact-submit-btn,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+[role="button"],
+.clickable,
+.navbar-toggler,
+select,
+label[for] {
+    cursor: url('../click-feather\ \(1\).png') 24 24, pointer !important;
+}
+
+input,
+textarea {
+    cursor: text;
+}
+
 html {
     scroll-behavior: smooth;
 }
