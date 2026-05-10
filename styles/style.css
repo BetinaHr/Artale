@@ -567,7 +567,7 @@ button:active {
 }
 
 .engraving {
-    margin-top: 28px;
+    margin-top: 14px;
     text-align: center;
 }
 
@@ -1454,4 +1454,322 @@ header .navbar .navbar-brand .artale-brand {
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     font-synthesis: none;
+}
+
+/* ============================= */
+/* Clickable book page flip */
+/* ============================= */
+
+.book {
+    cursor: url('../click-feather.png') 4 44, pointer !important;
+}
+
+.book-pages {
+    cursor: url('../click-feather.png') 4 44, pointer !important;
+    transition:
+        background-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* Hover color effect */
+.book:hover .book-pages {
+    background-color: #fff4e4;
+    box-shadow: 0 22px 42px rgba(139, 111, 71, 0.28);
+}
+
+.book:hover .book-cover {
+    background: linear-gradient(135deg, #9a7a4e, #6f5433);
+}
+
+/* Page layers */
+.book-page {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.book-page.active {
+    opacity: 1;
+}
+
+/* The fake turning page */
+.turning-page {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(44, 36, 22, 0.08),
+            rgba(255, 253, 249, 1) 35%,
+            rgba(248, 245, 237, 1)
+        );
+    border-radius: 2px 10px 10px 2px;
+    transform-origin: left center;
+    transform: rotateY(0deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* When book is flipping */
+.book-pages.flipping .turning-page {
+    opacity: 1;
+    animation: pageFlip 0.75s ease forwards;
+}
+
+@keyframes pageFlip {
+    0% {
+        transform: perspective(700px) rotateY(0deg);
+        opacity: 1;
+    }
+
+    45% {
+        transform: perspective(700px) rotateY(-85deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(700px) rotateY(-170deg);
+        opacity: 0;
+    }
+}
+
+.symbol-page {
+    inset: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-flower {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    line-height: 1;
+    color: rgba(139, 111, 71, 0.85);
+    margin-bottom: 14px;
+}
+
+.page-divider {
+    width: 52px;
+    height: 1px;
+    background: rgba(139, 111, 71, 0.35);
+    margin-bottom: 12px;
+}
+
+.page-symbol-caption {
+    margin: 0;
+    font-family: "PT Serif", serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(139, 111, 71, 0.72);
+    letter-spacing: 0.04em;
+}
+
+/* ============================= */
+/* Smooth book color transition */
+/* ============================= */
+
+.book-cover,
+.book-spine,
+.book-pages {
+    transition:
+        box-shadow 0.6s ease,
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* Cover overlay */
+.book-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        #2f4f3a 0%,
+        #4f6f55 30%,
+        #8b6f47 65%,
+        #d4b06a 100%
+    );
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+}
+
+/* Keep cover decorations above overlay */
+.cover-border,
+.cover-inner-border,
+.cover-decoration {
+    z-index: 2;
+}
+
+/* Spine overlay */
+.book-spine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        #24382b 0%,
+        #4f6f55 35%,
+        #8b6f47 70%,
+        #c9a45f 100%
+    );
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+}
+/* Pages overlay */
+.book-pages::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        radial-gradient(circle at 30% 25%, rgba(79, 111, 85, 0.18), transparent 38%),
+        radial-gradient(circle at 72% 70%, rgba(212, 176, 106, 0.22), transparent 42%),
+        #f7f0df;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+}
+
+/* Make page content stay above pages overlay */
+.book-page,
+.page-content,
+.painted-edge {
+    position: absolute;
+    z-index: 3;
+}
+
+/* Hover state */
+.book:hover .book-cover::after,
+.book:hover .book-spine::after,
+.book:hover .book-pages::after {
+    opacity: 1;
+}
+
+.book:hover .book-cover {
+    box-shadow: 0 24px 50px rgba(47, 79, 58, 0.35);
+}
+
+.book:hover .book-pages {
+    box-shadow: 0 22px 46px rgba(47, 79, 58, 0.24);
+}
+
+/* Smooth painted edges */
+.painted-edge.top,
+.painted-edge.right,
+.painted-edge.bottom {
+    transition:
+        opacity 0.6s ease,
+        filter 0.6s ease;
+}
+
+.book:hover .painted-edge.top {
+    background: linear-gradient(90deg, #2f4f3a, #4f6f55, #8b6f47, #d4b06a);
+}
+
+.book:hover .painted-edge.right {
+    background: linear-gradient(180deg, #2f4f3a, #4f6f55, #8b6f47, #d4b06a);
+}
+
+.book:hover .painted-edge.bottom {
+    background: linear-gradient(90deg, #d4b06a, #8b6f47, #4f6f55);
+}
+/* Details become warmer smoothly */
+.text-line,
+.page-ornament,
+.engraving span,
+.cover-decoration,
+.cover-initial,
+.ornament {
+    transition:
+        color 0.6s ease,
+        background-color 0.6s ease,
+        border-color 0.6s ease;
+}
+
+.book:hover .text-line {
+    background-color: rgba(47, 79, 58, 0.16);
+}
+
+.book:hover .page-ornament {
+    border-top-color: rgba(47, 79, 58, 0.42);
+}
+
+.book:hover .engraving span {
+    color: rgba(47, 79, 58, 0.9);
+}
+
+.book:hover .cover-decoration,
+.book:hover .cover-initial,
+.book:hover .ornament {
+    color: rgba(248, 245, 237, 0.85);
+}
+
+.book:hover .cover-initial {
+    border-color: rgba(248, 245, 237, 0.42);
+}
+
+/* ============================= */
+/* Smooth painted edges transform */
+/* ============================= */
+
+.painted-edge {
+    overflow: hidden;
+}
+
+/* overlay layer for smooth color change */
+.painted-edge::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.4s ease;
+}
+
+/* top edge hover colors */
+.painted-edge.top::after {
+    background: linear-gradient(
+        90deg,
+        #2f4f3a 0%,
+        #5e7a61 35%,
+        #9a7a47 70%,
+        #d4b06a 100%
+    );
+}
+
+/* right edge hover colors */
+.painted-edge.right::after {
+    background: linear-gradient(
+        180deg,
+        #2f4f3a 0%,
+        #5e7a61 35%,
+        #9a7a47 70%,
+        #d4b06a 100%
+    );
+}
+
+/* bottom edge hover colors */
+.painted-edge.bottom::after {
+    background: linear-gradient(
+        90deg,
+        #d4b06a 0%,
+        #9a7a47 35%,
+        #5e7a61 70%,
+        #2f4f3a 100%
+    );
+}
+
+/* show overlay on hover */
+.book:hover .painted-edge::after {
+    opacity: 1;
 }
