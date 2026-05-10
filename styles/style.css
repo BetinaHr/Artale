@@ -1773,3 +1773,113 @@ header .navbar .navbar-brand .artale-brand {
 .book:hover .painted-edge::after {
     opacity: 1;
 }
+
+/* ============================= */
+/* Elegant site loader */
+/* ============================= */
+
+.site-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at top left, rgba(212, 184, 150, 0.22), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(139, 111, 71, 0.16), transparent 35%),
+        #faf8f3;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.75s ease,
+        visibility 0.75s ease;
+}
+
+.site-loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+    animation: loaderFadeUp 1s ease both;
+}
+
+.loader-ornament {
+    margin-bottom: 14px;
+    color: var(--brown);
+    font-size: 1.7rem;
+    animation: ornamentPulse 1.4s ease-in-out infinite;
+}
+
+.loader-content h1 {
+    margin: 0;
+    color: var(--text);
+    font-family: "DXDoklad", monospace;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.14em;
+}
+
+.loader-content p {
+    margin: 12px 0 0;
+    color: rgba(44, 36, 22, 0.55);
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+}
+
+.loader-line {
+    width: 0;
+    height: 1px;
+    margin: 24px auto 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--brown),
+        transparent
+    );
+    animation: loaderLine 1.25s ease forwards;
+}
+
+@keyframes loaderFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loaderLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 220px;
+    }
+}
+
+@keyframes ornamentPulse {
+    0%, 100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+}
