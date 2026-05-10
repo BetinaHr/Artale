@@ -1,31 +1,32 @@
 .contacts-page {
     min-height: 100vh;
-    background:
+    /* background:
         radial-gradient(circle at top left, rgba(212, 184, 150, 0.18), transparent 34%),
         radial-gradient(circle at bottom right, rgba(142, 169, 140, 0.16), transparent 32%),
-        #faf8f3;
+        #faf8f3; */
 }
 
 .contacts-section {
-    padding: 130px 0 90px;
+    padding: 70px 0 90px;
 }
-
 .contacts-layout {
     display: grid;
     grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.8fr);
     gap: clamp(40px, 6vw, 90px);
-    align-items: center;
+    align-items: stretch;
 }
-
 /* left */
 
 .contacts-info-side {
     max-width: 640px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
 }
-
 .contacts-kicker {
     display: inline-block;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     color: var(--brown);
     font-size: 0.95rem;
     letter-spacing: 0.16em;
@@ -36,25 +37,26 @@
     margin: 0;
     color: var(--text);
     font-family: "DXDoklad", monospace;
-    font-size: clamp(3.2rem, 5vw, 5.8rem);
+    font-size: clamp(3.2rem, 3vw, 5.8rem);
     font-weight: 400;
     line-height: 1.02;
 }
 
 .contacts-intro {
     max-width: 580px;
-    margin: 28px 0 0;
+    margin: 26px 0 0;
     color: var(--text);
     font-size: clamp(1rem, 1.1vw, 1.18rem);
     line-height: 1.7;
 }
 
-
 .contacts-mini-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
-    margin-top: 38px;
+
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .contact-mini-card {
@@ -62,7 +64,7 @@
     grid-template-columns: 46px 1fr;
     gap: 14px;
     align-items: start;
-    padding: 20px;
+    padding: 22px;
     border-radius: 18px;
     border: 1px solid rgba(139, 111, 71, 0.12);
     background: rgba(255, 253, 249, 0.78);
@@ -112,14 +114,13 @@
 }
 
 .contacts-note {
-    margin-top: 28px;
+    margin-top: 0;
     padding: 24px 28px;
     border-radius: 20px;
     background:
         linear-gradient(135deg, #8b6f47 0%, #a06d52 55%, #8ea98c 100%);
     box-shadow: 0 14px 30px rgba(139, 111, 71, 0.14);
 }
-
 .contacts-note p {
     margin: 0;
     color: #fffdf9;
@@ -171,15 +172,18 @@
     box-shadow: 0 18px 46px rgba(139, 111, 71, 0.12);
 }
 
+.contact-form-side {
+    padding-top: 0;
+}
+
 .contact-form h2 {
-    margin: 0 0 26px;
+    margin: 0 0 24px;
     color: var(--text);
     font-family: "DXDoklad", monospace;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2rem, 2.5vw, 2.7rem);
     font-weight: 400;
     line-height: 1.1;
 }
-
 .form-group {
     display: flex;
     flex-direction: column;
