@@ -49,9 +49,20 @@
                     </ul>
                 </div>
 
-                <a href="./commissions.html" class="purchase-btn">
+                <div class="nav-actions">
+                    <a href="./cart.html" class="cart-btn" aria-label="Кошница">
+                        <img src="./assets/images/shopping-bag.png" alt="Кошница">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+
+                    <a href="./commissions.html" class="purchase-btn">
+                        Направи поръчка
+                    </a>
+                </div>
+
+                <!-- <a href="./commissions.html" class="purchase-btn">
                     Направи поръчка
-                </a>
+                </a> -->
 
             </div>
         </nav>
@@ -227,6 +238,7 @@
         </footer>
     </div>
 
+    <script src="./assets/js/cartCount.js"></script>
     <script src="./assets/js/page-transition.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

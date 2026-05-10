@@ -49,10 +49,16 @@
                     </ul>
                 </div>
 
-                <a href="./commissions.html" class="purchase-btn">
-                    Направи поръчка
-                </a>
+                <div class="nav-actions">
+                    <a href="./cart.html" class="cart-btn" aria-label="Кошница">
+                        <img src="./assets/images/shopping-bag.png" alt="Кошница">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
 
+                    <a href="./commissions.html" class="purchase-btn">
+                        Направи поръчка
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -352,7 +358,10 @@
             <p class="copyright">Artale © 2026</p>
         </footer>
     </div>
+
     <script src="./assets/js/page-transition.js"></script>
+    <script src="./assets/js/catalog-customize.js"></script>
+    <script src="./assets/js/cartCount.js"></script>  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
